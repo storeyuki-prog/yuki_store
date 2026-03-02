@@ -1,0 +1,177 @@
+/* Base settings */
+body {
+    margin: 0;
+    font-family: 'Poppins', 'Segoe UI', sans-serif; /* modern & minimal */
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%); /* dark luxury */
+    color: #ffffff;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(10,10,10,0.85);
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #f7c6e0; /* pastel pink */
+    border-radius: 50px;
+    padding: 10px 25px;
+    transition: 0.3s;
+}
+
+.logo:hover {
+    color: #ff1493; /* tech neon pink */
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f7c6e0; /* soft pastel hover */
+    text-shadow: 0 0 8px #f7c6e0, 0 0 15px #ff1493; /* tech neon */
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #e0d0f0; /* pastel lilac */
+    margin: 20px 0;
+}
+
+.hero button {
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px;
+    background: #f7c6e0;
+    color: #0a0a0a;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background: #ff1493;
+    color: #ffffff;
+    box-shadow: 0 0 15px #ff69b4, 0 0 30px #ff1493;
+}
+
+/* Products */
+.products {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.product {
+    background: #1a1a1a; /* dark luxury box */
+    padding: 20px;
+    border-radius: 25px;
+    width: 220px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #f7c6e0, 0 0 35px #ff1493; /* pastel + tech glow */
+}
+
+.product h3, .product p {
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.product button {
+    padding: 10px 20px;
+    border: 2px solid #f7c6e0;
+    border-radius: 25px;
+    background: #2c2c2c; /* dark soft minimal */
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.product button:hover {
+    border-color: #ff1493;
+    color: #ff1493;
+    box-shadow: 0 0 15px #f7c6e0, 0 0 30px #ff1493;
+}
+
+/* Cart section */
+.cart {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cart h2 {
+    font-size: 36px;
+    color: #ffffff;
+}
+
+#cart-items li {
+    list-style: none;
+    margin: 10px 0;
+    background: #2c2c2c;
+    padding: 10px 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+#cart-items li:hover {
+    box-shadow: 0 0 10px #f7c6e0, 0 0 20px #ff1493;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px 0;
+    background: #111;
+    color: #ffffff;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+@media (max-width:768px){
+    header {flex-direction: column; gap: 10px;}
+    .product-list {flex-direction: column; align-items: center;}
+    .hero h1 {font-size:36px;}
+    .hero p {font-size:16px;}
+}
