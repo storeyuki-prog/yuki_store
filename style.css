@@ -186,3 +186,21 @@ footer {
     transform: scale(1.05);
     filter: drop-shadow(0 0 10px #ff69b4);
 }
+.cute-checkout {
+    margin-top: 20px;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #f7c6e0, #ff69b4);
+    color: #111;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cute-checkout:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px #ff69b4, 0 0 30px #ff1493;
+    color: white;
+}
