@@ -39,10 +39,6 @@ header {
         0 0 20px #ff1493,
         0 0 40px #ff1493;
 }
-.logo:hover {
-    color: #ff1493; /* tech neon pink */
-    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493;
-}
 
 nav a {
     margin: 0 15px;
@@ -209,5 +205,6 @@ footer {
     box-shadow: 0 0 15px #ff69b4, 0 0 30px #ff1493;
     color: white;
 }
+
 
 
