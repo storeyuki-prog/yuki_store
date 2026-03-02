@@ -22,22 +22,24 @@ header {
 }
 
 .logo img {
-    width: 120px;              /* Bigger size */
+    width: 120px;
     height: 120px;
     object-fit: cover;
-    border-radius: 50%;        /* Perfect circle */
-    border: 3px solid #f7c6e0; /* Soft pastel border */
-    transition: all 0.4s ease;
+    border-radius: 50%;
+    border: 3px solid #f7c6e0;
+
+    /* Soft permanent neon */
+    box-shadow:
+        0 0 6px rgba(255, 105, 180, 0.4),
+        0 0 12px rgba(255, 105, 180, 0.3),
+        0 0 20px rgba(255, 20, 147, 0.2);
+
+    transition: transform 0.4s ease;
 }
 
-/* Neon glow on hover */
+/* Very subtle hover movement only */
 .logo img:hover {
-    transform: scale(1.08);
-    border-color: #ff1493;
-    box-shadow:
-        0 0 10px #ff69b4,
-        0 0 20px #ff1493,
-        0 0 40px #ff1493;
+    transform: scale(1.05);
 }
 
 nav a {
@@ -205,6 +207,7 @@ footer {
     box-shadow: 0 0 15px #ff69b4, 0 0 30px #ff1493;
     color: white;
 }
+
 
 
 
