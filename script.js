@@ -63,4 +63,29 @@ document.getElementById("stripe-btn").addEventListener("click", async () => {
 emailjs.send("service_uj2nvv8","template_h6nlm6i",{
     cart: JSON.stringify(cart),
     total: total
+
 }).then(res=>alert("Email sent!"));
+import { supabase } from './supabase.js'
+
+async function loadProducts() {
+  const { data, error } = await supabase
+    .from('products')
+    .select('*')
+
+  const container = document.getElementById("product-list")
+  container.innerHTML = ""
+
+  data.forEach(product => {
+    container.innerHTML += `
+      <div class="product">
+        <img src="${product.image}">
+        <h3>${product.name}</h3>
+        <p>${product.description}</p>
+        <p>$${product.price}</p>
+        <button>Add to Cart</button>
+      </div>
+    `
+  })
+}
+
+loadProducts()
