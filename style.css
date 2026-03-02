@@ -190,16 +190,7 @@ footer {
     .hero p {font-size:16px;}
 
 }
-.logo img {
-    height: 45px;
-    border-radius: 50px;
-    transition: 0.3s;
-}
 
-.logo img:hover {
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 10px #ff69b4);
-}
 .cute-checkout {
     margin-top: 20px;
     padding: 14px 35px;
@@ -218,4 +209,5 @@ footer {
     box-shadow: 0 0 15px #ff69b4, 0 0 30px #ff1493;
     color: white;
 }
+
 
