@@ -17,14 +17,28 @@ header {
 }
 
 .logo {
-    font-size: 28px;
-    font-weight: 700;
-    color: #f7c6e0; /* pastel pink */
-    border-radius: 50px;
-    padding: 10px 25px;
-    transition: 0.3s;
+    display: flex;
+    align-items: center;
 }
 
+.logo img {
+    width: 120px;              /* Bigger size */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;        /* Perfect circle */
+    border: 3px solid #f7c6e0; /* Soft pastel border */
+    transition: all 0.4s ease;
+}
+
+/* Neon glow on hover */
+.logo img:hover {
+    transform: scale(1.08);
+    border-color: #ff1493;
+    box-shadow:
+        0 0 10px #ff69b4,
+        0 0 20px #ff1493,
+        0 0 40px #ff1493;
+}
 .logo:hover {
     color: #ff1493; /* tech neon pink */
     text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493;
@@ -204,3 +218,4 @@ footer {
     box-shadow: 0 0 15px #ff69b4, 0 0 30px #ff1493;
     color: white;
 }
+
