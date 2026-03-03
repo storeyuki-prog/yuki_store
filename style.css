@@ -291,3 +291,38 @@ footer a:hover {
     color: #ff1493;
     text-shadow: 0 0 6px rgba(255,20,147,0.4);
 }
+.category-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: 1.5px solid #f7c6e0;
+    background: transparent;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.category-btn:hover {
+    background: rgba(247, 198, 224, 0.15);
+    box-shadow:
+        0 0 8px rgba(255,105,180,0.3),
+        0 0 15px rgba(255,20,147,0.2);
+}
+
+/* Active (selected) */
+.category-btn.active {
+    background: linear-gradient(135deg, #f7c6e0, #ff69b4);
+    color: #0a0a0a;
+    border: none;
+    box-shadow:
+        0 0 10px rgba(255,105,180,0.4),
+        0 0 20px rgba(255,20,147,0.3);
+}
