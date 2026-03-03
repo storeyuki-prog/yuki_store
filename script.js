@@ -89,3 +89,10 @@ async function loadProducts() {
 }
 
 loadProducts()
+function setActive(button) {
+    document.querySelectorAll(".category-btn").forEach(btn => {
+        btn.classList.remove("active");
+    });
+    button.classList.add("active");
+}
+
