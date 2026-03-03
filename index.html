@@ -1,75 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Yuki Store</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>YUKI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Elegant Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-   <div class="logo">
-    <img src="logo.png" alt="Yuki Logo">
-       <div class="logo">🌸 Yuki</div>
-   </div>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="YUKI Logo">
+    </div>
+
     <nav>
-        <input type="text" id="search" placeholder="Search products...">
-        <a href="#products">Products</a>
-        <a href="#cart">Cart <span id="cart-count">0</span></a>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Collections</a>
+      <a href="#">Contact</a>
     </nav>
-    </header>
 
-    <section class="hero">
-    <h1>Welcome to Yuki Store</h1>
-    <p>Cute, Luxury & Modern Products</p>
-    <button onclick="scrollToProducts()">Shop Now</button>
-    </section>
+    <button class="checkout-btn">Checkout</button>
+  </header>
 
-   <section class="categories">
-     <h2>Shop by Category</h2>
-      <div class="category-list">
-     <button class="category-btn active" onclick="setActive(this)">All</button>
-     <button class="category-btn" onclick="setActive(this)">Fashion</button>
-     <button class="category-btn" onclick="setActive(this)">Accessories</button>
-     <button class="category-btn" onclick="setActive(this)">Tech</button>
-     </div>
-    </section>
-    
-    <section id="products" class="products">
-    <h2>Our Products</h2>
-    <div class="product-list" id="product-list"></div>
-    </section>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Luxury. Soft. Modern.</h1>
+    <p>Welcome to YUKI — Where elegance meets the future.</p>
+    <button class="shop-btn">Shop Now</button>
+  </section>
 
-    <section id="cart" class="cart">
-    <h2>Your Cart</h2>
-    <ul id="cart-items"></ul>
-    <h3>Total: $<span id="total">0</span></h3>
-    <button id="checkout-btn" class="cute-checkout">
-    💳 Secure Checkout
-    </button>
-    </section>
+  <!-- CATEGORIES -->
+  <section class="categories">
+    <h2>Categories</h2>
 
-    
-    <h2>About Yuki</h2>
-    <p>
-      Yuki is a modern luxury brand blending soft pastel aesthetics
-       with futuristic minimal design.
-    </p>
-    </section>
-    <footer>
-    <p>© 2026 Yuki Store | Contact: storeyuki2@gmail.com</p>
-    </footer>
-    <section class="about">
-<script type="module" src="script.js"></script>
-<button id="stripe-btn">Pay with Stripe</button>
+    <div class="category-list">
+      <button class="category-btn active" onclick="setActive(this)">All</button>
+      <button class="category-btn" onclick="setActive(this)">Fashion</button>
+      <button class="category-btn" onclick="setActive(this)">Accessories</button>
+      <button class="category-btn" onclick="setActive(this)">Tech</button>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products">
+    <h2>Featured Products</h2>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x300" alt="">
+        <h3>Soft Pink Bag</h3>
+        <p>$49</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x300" alt="">
+        <h3>Minimal Watch</h3>
+        <p>$79</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x300" alt="">
+        <h3>Luxury Headset</h3>
+        <p>$129</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <h2>Join Our World</h2>
+    <input type="email" placeholder="Your email">
+    <button>Subscribe</button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>
+      <h3>YUKI</h3>
+      <p>Dark Luxury Modern Brand</p>
+    </div>
+
+    <div>
+      <h4>Links</h4>
+      <a href="#">Shop</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
