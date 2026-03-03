@@ -28,11 +28,11 @@
    <section class="categories">
      <h2>Shop by Category</h2>
       <div class="category-list">
-       <button onclick="filterCategory('all')">All</button>
-       <button onclick="filterCategory('fashion')">Fashion</button>
-       <button onclick="filterCategory('accessories')">Accessories</button>
-       <button onclick="filterCategory('tech')">Tech</button>
-      </div>
+     <button class="category-btn active" onclick="setActive(this)">All</button>
+     <button class="category-btn" onclick="setActive(this)">Fashion</button>
+     <button class="category-btn" onclick="setActive(this)">Accessories</button>
+     <button class="category-btn" onclick="setActive(this)">Tech</button>
+     </div>
     </section>
     
     <section id="products" class="products">
@@ -65,6 +65,7 @@
 </body>
 
 </html>
+
 
 
 
