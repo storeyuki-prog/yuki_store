@@ -271,7 +271,23 @@ footer {
         0 0 20px rgba(255,20,147,0.4);
     color: white;
 }
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background: #111;
+    flex-wrap: wrap;
+}
 
+footer a {
+    display: block;
+    color: #f7c6e0;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: 0.3s ease;
+}
 
-
-
+footer a:hover {
+    color: #ff1493;
+    text-shadow: 0 0 6px rgba(255,20,147,0.4);
+}
