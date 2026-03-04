@@ -1,17 +1,35 @@
+/************************************
+ YUKI WEBSITE - MAIN SCRIPT
+************************************/
+
 document.addEventListener("DOMContentLoaded", function () {
 
-    const buttons = document.querySelectorAll(".category-btn");
+    console.log("YUKI JS Loaded Successfully");
 
-    buttons.forEach(button => {
-        button.addEventListener("click", function () {
+    /* ==============================
+       CATEGORY BUTTON ACTIVE SYSTEM
+    =============================== */
 
-            buttons.forEach(btn => {
-                btn.classList.remove("active");
+    const categoryButtons = document.querySelectorAll(".category-btn");
+
+    if (categoryButtons.length > 0) {
+
+        categoryButtons.forEach(function (button) {
+
+            button.addEventListener("click", function () {
+
+                // Remove active from all
+                categoryButtons.forEach(function (btn) {
+                    btn.classList.remove("active");
+                });
+
+                // Add active to clicked
+                this.classList.add("active");
+
             });
 
-            this.classList.add("active");
-
         });
-    });
+
+    }
 
 });
