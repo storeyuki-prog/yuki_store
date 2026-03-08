@@ -1,35 +1,95 @@
-/************************************
- YUKI WEBSITE - MAIN SCRIPT
-************************************/
+// ===============================
+// CATEGORY BUTTON ACTIVE EFFECT
+// ===============================
+function setActive(button) {
 
-document.addEventListener("DOMContentLoaded", function () {
+  // remove active class from all buttons
+  const buttons = document.querySelectorAll(".category-btn");
+  buttons.forEach(btn => {
+    btn.classList.remove("active");
+  });
 
-    console.log("YUKI JS Loaded Successfully");
+  // add active to clicked button
+  button.classList.add("active");
+}
 
-    /* ==============================
-       CATEGORY BUTTON ACTIVE SYSTEM
-    =============================== */
 
-    const categoryButtons = document.querySelectorAll(".category-btn");
+// ===============================
+// SHOP NOW BUTTON SCROLL
+// ===============================
+const shopBtn = document.querySelector(".shop-btn");
 
-    if (categoryButtons.length > 0) {
+shopBtn.addEventListener("click", () => {
+  document.querySelector(".products").scrollIntoView({
+    behavior: "smooth"
+  });
+});
 
-        categoryButtons.forEach(function (button) {
 
-            button.addEventListener("click", function () {
+// ===============================
+// CART SYSTEM
+// ===============================
+let cart = [];
+let cartCount = 0;
 
-                // Remove active from all
-                categoryButtons.forEach(function (btn) {
-                    btn.classList.remove("active");
-                });
+const addButtons = document.querySelectorAll(".product-card button");
+const checkoutBtn = document.querySelector(".checkout-btn");
 
-                // Add active to clicked
-                this.classList.add("active");
+addButtons.forEach(button => {
 
-            });
+  button.addEventListener("click", () => {
 
-        });
+    const card = button.parentElement;
+    const name = card.querySelector("h3").innerText;
+    const price = card.querySelector("p").innerText;
 
-    }
+    cart.push({ name, price });
+    cartCount++;
 
+    checkoutBtn.innerText = `Checkout (${cartCount})`;
+
+    alert(name + " added to cart!");
+  });
+
+});
+
+
+// ===============================
+// CHECKOUT BUTTON
+// ===============================
+checkoutBtn.addEventListener("click", () => {
+
+  if (cart.length === 0) {
+    alert("Your cart is empty.");
+    return;
+  }
+
+  let message = "Your cart:\n\n";
+
+  cart.forEach(item => {
+    message += item.name + " - " + item.price + "\n";
+  });
+
+  alert(message);
+});
+
+
+// ===============================
+// NEWSLETTER SUBSCRIBE
+// ===============================
+const subscribeBtn = document.querySelector(".newsletter button");
+const emailInput = document.querySelector(".newsletter input");
+
+subscribeBtn.addEventListener("click", () => {
+
+  const email = emailInput.value;
+
+  if (email === "") {
+    alert("Please enter your email.");
+    return;
+  }
+
+  alert("Thank you for joining YUKI 💎");
+
+  emailInput.value = "";
 });
